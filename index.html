@@ -7,8 +7,15 @@
     <title>Simple AR website</title>
 </head>
 <body>
-    <model-viewer src="asset/Chalet.glb" camera-controls auto-rotate ar camera-controls touch-action="pan-y" ar-scale="fixed"
-              ar-modes="webxr scene-viewer quick-look" shadow-intensity="1"></model-viewer>
+    <model-viewer src="asset/Chalet.glb" camera-controls auto-rotate ar camera-controls touch-action="pan-y" 
+        ar-scale="auto"
+        ar-modes="webxr scene-viewer quick-look" 
+        shadow-intensity="1"
+        field-of-view="45deg"
+        min-field-of-view="10deg" 
+        max-field-of-view="45deg"
+        camera-target="0m 0m 0m"
+        style="transform: translateY(-2m) scale(1.5);></model-viewer>
 </body>
 <style>
     model-viewer{
