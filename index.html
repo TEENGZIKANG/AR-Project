@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-    <title>Simple AR website</title>
+    <title>Simple AR Website</title>
 </head>
 <body>
-    <model-viewer src="asset/Chalet.glb" camera-controls auto-rotate ar camera-controls touch-action="pan-y" 
-        ar-scale="auto"
-        ar-modes="webxr scene-viewer quick-look" 
-        shadow-intensity="1"
-        field-of-view="45deg"
-        min-field-of-view="10deg" 
-        max-field-of-view="45deg"
-        camera-target="0m 0m 0m"
-        style="transform: translateY(-2m) scale(1.5);></model-viewer>
+    <model-viewer id="viewer" 
+                  src="asset/Chalet.glb" 
+                  auto-rotate 
+                  ar 
+                  camera-controls 
+                  ar-scale="auto" 
+                  ar-modes="webxr scene-viewer quick-look" 
+                  shadow-intensity="1" 
+                  field-of-view="45deg" 
+                  min-field-of-view="10deg" 
+                  max-field-of-view="60deg" 
+                  camera-target="0m 1m 0m"  <!-- Adjusted to place the model slightly higher -->
+                  style="width: 400px; height: 600px; transform: translateY(-1.5m) scale(0.5);"> <!-- Adjusted scale and position -->
+    </model-viewer>
 </body>
 <style>
-    model-viewer{
+    model-viewer {
         width: 400px;
         height: 600px;
         margin: 0 auto;
     }
 </style>
 </html>
+
